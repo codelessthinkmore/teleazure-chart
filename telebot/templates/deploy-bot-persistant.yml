@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: telegram-bot
+  labels:
+    app: telegram-bot
+spec:
+  serviceName: telegram-bot
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telegram-bot
+  template:
+    metadata:
+      labels:
+        app: telegram-bot
+    spec:
+      serviceAccountName: telebot
+      terminationGracePeriodSeconds: 1800
+      containers:
+      - name: telegram-bot-instance
+        image: jayesh86docker/telebot:latest
+        imagePullPolicy: Always
+        args: [{{ .Values.telegrambotcred}}]
+        ports:
+        - containerPort: 8080
+          name: tcp
+        env:
+          - name: storagepath
+            value: /etc/telebot/files
+        volumeMounts:
+        - name: telebot-data
+          mountPath: /etc/telebot
+  # These are converted to volume claims by the controller
+  # and mounted at the paths mentioned above.
+  # do not use these in production until ssd GCEPersistentDisk or other ssd pd
+  volumeClaimTemplates:
+  - metadata:
+      name: telebot-data
+    spec:
+      accessModes: [ "ReadWriteMany" ]
+      storageClassName: "{{ .Values.storageClassName }}"
+      resources:
+        requests:
+          storage: 1Gi                  

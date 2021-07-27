@@ -1,0 +1,23 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: telebot
+  name: telebot
+rules:
+- apiGroups: ["","extensions","apps","networking.istio.io"]
+  resources: ["deployments","statefulsets","pods","services","virtualservices"]
+  verbs: ["list","get","watch","create","update","patch","delete"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: telebot
+  name: telebot-role-binding
+subjects:
+- kind: ServiceAccount
+  name: telebot
+  namespace: telebot
+roleRef:
+  kind: Role
+  name: telebot
+  apiGroup: ""  
