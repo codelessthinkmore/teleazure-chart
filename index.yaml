@@ -1,3 +1,5 @@
+teleazure-0.1.0.tgz
+teleazure-0.1.0.tgz
 apiVersion: v1
 entries:
   teleazure:
@@ -9,6 +11,6 @@ entries:
     name: teleazure
     type: application
     urls:
-    - https://github.com/codelessthinkmore/teleazure-chart/teleazure-0.1.0.tgz
+    - https://codelessthinkmore.github.io/teleazure-chart/teleazure-0.1.0.tgz
     version: 0.1.0
 generated: "2021-07-27T11:03:24.313359472Z"
