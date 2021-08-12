@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 1800
       containers:
       - name: telegram-bot-instance
-        image: jayesh86docker/telebot:latest
+        image: jayesh86docker/telebot:{{ .Values.telebotVersion }}
         imagePullPolicy: Always
         args: [{{ .Values.telegrambotcred}}]
         ports:
