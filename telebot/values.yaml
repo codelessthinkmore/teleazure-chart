@@ -5,6 +5,7 @@
 telegrambotcred: ""
 storageClassName: "ssd-nfs-storage"
 replicaCount: 1
+telebotversion: ""
 
 image:
   repository: nginx
