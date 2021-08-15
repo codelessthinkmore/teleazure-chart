@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   teleazure:
   - apiVersion: v2
+    appVersion: 1.0.43
+    created: "2021-08-15T09:30:25.799715824Z"
+    description: A Helm chart for Kubernetes
+    digest: d73de7bf33f4b14bc5fae1cea266aca544a390e9f5e3640e1a68e46d15490eed
+    name: teleazure
+    type: application
+    urls:
+    - teleazure-1.0.43.tgz
+    version: 1.0.43
+  - apiVersion: v2
     appVersion: 1.0.42
-    created: "2021-08-15T08:10:01.264754359Z"
+    created: "2021-08-15T09:30:25.799289617Z"
     description: A Helm chart for Kubernetes
     digest: 8a339faf6d559b0bfcdcfa6694c93044922035f0b450d7f9a5d6d6be2d9f7fde
     name: teleazure
@@ -11,4 +21,4 @@ entries:
     urls:
     - teleazure-1.0.42.tgz
     version: 1.0.42
-generated: "2021-08-15T08:10:01.26419685Z"
+generated: "2021-08-15T09:30:25.798542804Z"
