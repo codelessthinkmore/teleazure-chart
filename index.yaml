@@ -2,13 +2,13 @@ apiVersion: v1
 entries:
   teleazure:
   - apiVersion: v2
-    appVersion: 1.0.7
-    created: "2021-07-27T11:03:24.314494164Z"
+    appVersion: 1.0.42
+    created: "2021-08-15T08:10:01.264754359Z"
     description: A Helm chart for Kubernetes
-    digest: e6e63a0dec18eab9382ef0b13b9055d229ec7d6fe4a290cc2b39f479a17a6d26
+    digest: 8a339faf6d559b0bfcdcfa6694c93044922035f0b450d7f9a5d6d6be2d9f7fde
     name: teleazure
     type: application
     urls:
-    - https://codelessthinkmore.github.io/teleazure-chart/1.0.7.tgz
-    version: 1.0.7
-generated: "2021-07-27T11:03:24.313359472Z"
+    - teleazure-1.0.42.tgz
+    version: 1.0.42
+generated: "2021-08-15T08:10:01.26419685Z"
